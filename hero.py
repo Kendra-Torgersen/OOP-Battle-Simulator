@@ -13,14 +13,15 @@ class Hero:
     """
     
     def __init__(self, name):
-        #TODO Set the hero's name.
-        #TODO Set the hero's health. You might give the hero more health than a goblin.
-        #TODO Set the hero's attack power. Should it be more consistent than the goblin's?
+        self.name = name
+        self.health = 150
+        self.attack_power = random.randint(5, 15)
     
 
     def strike(self):
-        # TODO Implement the hero's attack logic. It could be stronger or more consistent than a goblin's.
+        return random.randint(1, self.attack_power)
     
+
     def receive_damage(self, damage):
         # TODO Implement take_damage
         # TODO We should prevent health from going into the NEGATIVE
