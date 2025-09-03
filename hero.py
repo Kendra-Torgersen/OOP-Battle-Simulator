@@ -1,3 +1,4 @@
+import random
 class Hero:
     """
     This is our hero blueprint.
@@ -23,7 +24,9 @@ class Hero:
     
 
     def receive_damage(self, damage):
-        # TODO Implement take_damage
-        # TODO We should prevent health from going into the NEGATIVE
+        self.health -= damage
+        self.health = self.health - damage
+        print(f"{self.name} takes {damage} damage. Health is now {self.health}.")
     
-    #TODO define is_alive
+    def is_alive(self):
+        return self.health > 0
