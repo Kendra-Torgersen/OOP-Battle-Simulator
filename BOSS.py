@@ -11,7 +11,7 @@ class Wizard(enemy):
     """
     def __init__(self, name):
         super().__init__(name)
-        self.attack_power = 30
+        self.attack_power = 10
         self.health = 300
 
     def attack(self):
