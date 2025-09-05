@@ -27,6 +27,13 @@ class Hero:
         self.health -= damage
         self.health = self.health - damage
         print(f"{self.name} takes {damage} damage. Health is now {self.health}.")
+        
+        
+    def damage_sheild(self, damage):
+        self.health -= damage
+        if damage > 7:
+            self.health = self.health + damage
+        return self.health
     
     def is_alive(self):
         return self.health > 0

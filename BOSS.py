@@ -26,3 +26,4 @@ class Wizard(enemy):
         elif self.health < 50:
             self.attack_power = 90
         return self.attack_power
+    
