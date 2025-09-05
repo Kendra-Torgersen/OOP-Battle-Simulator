@@ -13,7 +13,7 @@ class Hero:
         (Bonus) special_ability: A unique ability the hero can use.
     """
     
-    def __init__(self, name):
+    def __init__(self, name, damage):
         self.name = name
         self.health = 150
         self.attack_power = random.randint(5, 15)
