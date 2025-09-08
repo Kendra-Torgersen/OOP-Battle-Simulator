@@ -2,7 +2,6 @@ import random
 from goblin import Goblin
 from hero import Hero
 from BOSS import Wizard
-from babyelf import BabyElf
 
 def main():
     print("Welcome to the Battle Arena!")
@@ -13,7 +12,7 @@ def main():
     # Create goblins ༼ ºل͟º ༽ ༼ ºل͟º ༽ ༼ ºل͟º ༽
     goblins = [Goblin(f"Goblin {i+1}", "green") for i in range(3)]
 
-    
+
 
     # Keep track of how many goblins were defeated
     defeated_goblins = 0
@@ -49,15 +48,16 @@ def main():
         print(f"\nThe hero has defeated all the goblins! ༼ ᕤ◕◡◕ ༽ᕤ")
     else:
         print(f"\nThe hero has been defeated. Game Over. (｡•́︿•̀｡)")
-    
+
     if hero.is_alive():
-        print(f"\nboss fight time!!")
+        print("Boss TIME")
         boss = Wizard("Sauron")
-        while hero.is_alive() and boss.is_alive:
-            damage = hero.strike()
-            boss.take_damage(damage)
-            damage = boss.strike()
-            hero.take_damage(damage)
+        while hero.is_alive() and boss.is_alive():
+                damage = hero.strike()
+                boss.take_damage(damage)
+                damage = boss.attack()
+                hero.receive_damage(damage)
+        
 
 
     print(f"\n Total damage dealt: {total_damage}")

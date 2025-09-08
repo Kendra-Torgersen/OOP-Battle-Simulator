@@ -15,12 +15,12 @@ class Hero:
     
     def __init__(self, name):
         self.name = name
-        self.health = 200
-        self.attack_power = random.randint(5, 15)
+        self.health = 400
+        self.attack_power = random.randint(25, 45)
     
 
     def strike(self):
-        return random.randint(1, self.attack_power)
+        return random.randint(15, self.attack_power)
     
 
     def receive_damage(self, damage):
